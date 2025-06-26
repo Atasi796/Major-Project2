@@ -1,0 +1,127 @@
+
+<% layout ('layouts/boilerplate') -%>
+ <br>
+<div class="tax-toggle">
+  <div class="form-check form-switch form-check-reverse">
+    <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+    <label class="form-check-label" for="switchCheckDefault">Display total before taxes</label>
+  </div>
+</div>
+<br> <br> 
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-lg-1">
+    <% for(let listing of allListings) { %>
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+            <div class="card col listing-card">
+  <img src="<%= listing.image.url %>" class="card-img-top" alt="listingimage" style="height:20rem">
+  <div class="card-img-overlay"></div>
+  <div class="card-body">
+    <p class="card-text">
+    <b> <%= listing.title %></b> 
+      <div>&#8377; <%= listing.price.toLocaleString("en-IN") %>
+       <i class="gst-text">+18% GST</i>
+    </div>
+    </p>
+  </div>
+</div>
+  </a>
+     <% } %>
+     </div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById('switchCheckDefault');
+
+    toggle.addEventListener('change', function () {
+      const gstTexts = document.querySelectorAll('.gst-text');
+      gstTexts.forEach(el => {
+        el.style.display = this.checked ? 'none' : 'inline';
+      });
+    });
+  });
+</script>
+
+     <!---<style>
+ #filters {
+  display: flex;
+  overflow-x: auto;
+  padding: 16px;
+  gap: 24px;
+  border-bottom: 1px solid #ddd;
+  background-color: white;
+  scrollbar-width: none; 
+}
+
+#filters::-webkit-scrollbar {
+  display: none; 
+}
+
+.filters {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  min-width: 80px;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.filters:hover {
+  color: #ff385c;
+}
+</style>
+<div id="filters" class="d-flex flex-nowrap overflow-auto gap-4 p-3 border-bottom shadow-sm bg-white">
+
+  <div class="filters text-center">
+    <div><i class="fa-solid fa-fire fa-lg mb-1"></i></div>
+    <p><b>Trendings</b></p>
+  </div>
+
+ 
+  <div class="filters text-center">
+    <div><i class="fa-solid fa-door-open fa-lg mb-1"></i></div>
+    <p><b>Rooms</b></p>
+  </div>
+
+  <div class="filters text-center">
+    <div><i class="fa-solid fa-city fa-lg mb-1"></i></div>
+    <p><b>Iconic Cities</b></p>
+  </div>
+
+
+  <div class="filters text-center">
+    <div><i class="fa-solid fa-mountain fa-lg mb-1"></i></div>
+    <p><b>Mountains</b></p>
+  </div>
+
+
+  <div class="filters text-center">
+    <div><i class="fa-solid fa-chess-rook fa-lg mb-1"></i></div>
+    <p><b>Castles</b></p>
+  </div>
+
+
+  <div class="filters text-center">
+    <div><i class="fa-solid fa-water-ladder fa-lg mb-1"></i></div>
+    <p><b>Pools</b></p>
+  </div>
+
+
+  <div class="filters text-center">
+    <div><i class="fa-solid fa-campground fa-lg mb-1"></i></div>
+    <p><b>Camping</b></p>
+  </div>
+
+  <div class="filters text-center">
+    <div><i class="fa-solid fa-tractor fa-lg mb-1"></i></div>
+    <p><b>Farm</b></p>
+  </div>
+
+  <div class="filters text-center">
+    <div><i class="fa-solid fa-snowflake fa-lg mb-1"></i></div>
+    <p><b>Arctic</b></p>
+  </div>
+</div>
+--->
+    
+  
+  

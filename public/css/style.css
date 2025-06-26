@@ -1,0 +1,142 @@
+
+/*Navbar*/
+.navbar{
+    height:5rem;
+    background-color: white;
+}
+.fa-solid.fa-house{
+    color:#fe424d !important;
+    font-size: 2rem !important;
+}
+.nav-link{
+    color:#222222 !important;
+}
+
+/*Footer*/
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 40px;
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 50px;
+}
+
+.f-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.f-class-socials i {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #495057;
+    transition: color 0.3s ease;
+}
+
+.f-class-socials i:hover {
+    color: #0d6efd; /* Bootstrap Primary Color */
+}
+
+.f-info-links {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.f-info-links a {
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.f-info-links a:hover {
+    color: #0d6efd;
+}
+
+/*Cards*/
+ .listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+ }
+
+ .card-img-top{
+    border-radius: 1rem !important;
+    width:100%;
+    object-fit: cover !important;
+ }
+ .card-body{
+    padding: 0 !important;
+ }
+ .card-text{
+    font-size: large;
+    font-weight: 400;
+ }
+ .listing-link{
+    text-decoration: none;
+ }
+
+ /*Card effect*/
+ .card-img-overlay{
+    opacity: 0;
+ }
+  .card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+ }
+ /*edit page"*/
+ .edit-btn{
+    background-color: #fe424d;
+    border:none;
+    border-radius: 15%;
+ }
+ /*Add button*/
+  .add-btn{
+      background-color: #fe424d;
+      border:none;
+    border-radius:15%;
+  }
+
+  /*show page*/
+  .show-image{
+    height:30vh;
+  }
+  .btns{
+    display: flex;
+  }
+
+  .submit-btn{
+      background-color: #fe424d;
+      border:none;
+    color:#dee2e6;
+  }
+
+  /*  Map   */ 
+#map{ 
+    height:400px;
+     width: 400px ;
+    }
+    .tax-toggle {
+  padding: 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+}
+.btn-search{
+      background-color: #fe424d;
+    color:#dee2e6;
+      border-radius: 25px;
+
+  }
+  .btn-search i{
+    display:inline;
+    margin-right :0.5rem;
+  }
+  .search-form{
+   border-radius: 25px;
+   padding: .5rem 3rem .5rem 3rem; 
+  }
+
+  
