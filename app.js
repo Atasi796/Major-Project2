@@ -70,9 +70,11 @@ const sessionOptions ={
 };
 
 
+
 app.get("/", (req, res) => {
   res.redirect("/listings"); // or render a homepage
 });
+
 
 
 
@@ -106,19 +108,7 @@ app.use("/",user);
 
 
 
-// app.get("/testListing", async (req, res) => {
-//   let sampleListing = new Listing({
-//     title: "My New Villa",
-//     description: "By the beach",
-//     price: 1200,
-//     location: "Calangute, Goa",
-//     country: "India",
-//   });
 
-//   await sampleListing.save();
-//   console.log("sample was saved");
-//   res.send("successful testing");
-// });
 
 /*app.all("*", (req, res, next) => {
   next(new ExpressError(404, "Page not found")); // ✅ Correct spelling
@@ -130,6 +120,8 @@ app.use((err, req, res, next) => {
   //res.status(statusCode).send(message);
 });
 
-app.listen(8080, () => {
-  console.log("server is listening to port 8080");
+// Listen on dynamic port for Render
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`✅ Server running on port ${PORT}`);
 });
